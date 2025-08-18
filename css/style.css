@@ -1,0 +1,298 @@
+/*Imports*/
+@import url("fonts.css");
+@import url("variables.css");
+
+/*CSS Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+:root {
+  --theme-color: #0e2028;
+}
+
+body {
+  background: var(--default-background);
+  background-image: unset;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  min-height: 100vh;
+  font-family: var(--default-serif-font);
+  font-size: var(--font-size-default);
+  font-weight: lighter;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+body ul {
+  padding-left: var(--size-value-big);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--serif-font-3);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: var(--font-size-large);
+}
+
+h2 {
+  font-size: var(--font-size-big);
+}
+
+h3 {
+  font-size: var(---font-size-medium);
+}
+
+table,
+tr,
+td,
+th,
+caption {
+  border: var(--border-default);
+  border-collapse: collapse;
+  padding: var(--size-value-small);
+  font-family: var(--sans-serif-font-1);
+}
+
+button {
+  font-family: var(--sans-serif-font-2);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  user-select: none;
+  border: none;
+  border-radius: var(--border-radius-default);
+  background: var(--color-blue);
+  color: var(--color-light);
+  padding: var(--size-value-small);
+  transform: scale(1);
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.96);
+  transition: 0.1s linear;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ul li::marker {
+  color: turquoise;
+  font-size: var(--font-size-medium);
+}
+
+a {
+  color: var(--color-blue-light);
+  text-decoration: none;
+  transition: none;
+}
+
+a:visited {
+  color: var(--color-purple);
+}
+
+a:hover {
+  color: var(--color-light);
+  text-decoration: underline;
+  transition: 0.25s;
+}
+
+a:active {
+  color: var(--color-red);
+  transition: none;
+}
+
+input {
+  font: inherit;
+}
+
+input:is([type="text"], [type="number"]):focus {
+  outline: none;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin: 0 12px 0 3px;
+}
+
+/*Reset End*/
+
+/*Utility Classes*/
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.box-center1 {
+  display: block;
+  margin: auto;
+}
+
+.box-center2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End Utitlity Classes */
+
+.container {
+  background: var(--theme-color);
+  border: 1px solid #0004;
+  border-radius: var(--border-radius-default);
+  padding: 0 var(--size-value-big) var(--size-value-big);
+  box-shadow: var(--box-shadow-dark);
+}
+
+.container h1 {
+  text-align: center;
+  padding-block: var(--size-value-big);
+}
+
+.passwordGenerator {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+form .selectCharacters {
+  line-height: 2em;
+}
+
+.selectCharacters aside {
+  margin-left: 20px;
+}
+
+aside :is(p, label.lengthLabel) {
+  font-size: var(--font-size-medium);
+}
+
+aside.selectCharacterLength .passwordLengthInput {
+  background: rgba(0, 0, 0, 0.6);
+  color: inherit;
+  margin: 10px 0 0 20px;
+  padding: 10px 20px;
+  width: 60%;
+  border: var(--border-default);
+  border-color: #fff;
+  border-radius: var(--border-radius-default);
+  border-width: 3px;
+  /*text-align: center;*/
+}
+
+.passwordGenerator .formSubmit {
+  width: 50%;
+  display: block;
+  font-size: var(--font-size-default);
+  margin: auto;
+}
+
+.container.passwordResultContainer {
+  position: relative;
+  padding: 1.75rem;
+  font-family: var(--default-sans-serif-font);
+  display: none;
+  margin: auto;
+  overflow: hidden;
+  width: 70%;
+}
+
+.container .passwordLabel {
+  font-weight: 900;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #fff;
+  padding-right: 1rem;
+  width: fit-content;
+  border-radius: var(--border-radius-default) 0 0 var(--border-radius-default);
+}
+
+.passwordResultContainer .passwordResultText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 9rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.copy-button {
+  font-weight: 900;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12.5%;
+  transform: scale(0.96);
+  box-shadow: none;
+  background: lightgray;
+  color: var(--color-dark);
+  font-size: var(--font-size-medium);
+  border-radius: 0 10px 10px 0;
+}
+
+.copy-icon.fa-clipboard-check {
+  color: var(--color-green);
+  animation: rotateClipboard 0.5s ease forwards;
+}
+
+@keyframes rotateClipboard {
+  0% {
+    transform: rotateY(-100deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}

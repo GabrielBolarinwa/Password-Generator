@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="fontawesome6/pro/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <h1>Password Generator</h1>
+        <form class="passwordGenerator" onsubmit="generatePassword(event);">
+          <aside class="selectCharacters">
+            <p>Select the Characters to be contained in the password:</p>
+            <aside>
+              <input type="checkbox" name="" id="lowerCase" checked />
+              <label for="lowerCase">Lower Case Characters</label><br />
+              <input type="checkbox" name="" id="upperCase" checked />
+              <label for="upperCase">Upper Case Characters</label><br />
+              <input type="checkbox" name="" id="symbols" />
+              <label for="symbols">Symbols Characters</label><br />
+              <input type="checkbox" name="" id="number" />
+              <label for="number">Numbers</label><br />
+            </aside>
+          </aside>
+          <aside class="selectCharacterLength">
+            <label for="lengthText" class="lengthLabel"
+              >Enter Desired Password Length:</label
+            >
+            <br />
+            <div class="input-box">
+              <input
+                type="number"
+                name=""
+                class="passwordLengthInput"
+                id="lengthText"
+                value="10"
+              />
+            </div>
+          </aside>
+          <button type="submit" class="formSubmit">Generate Password</button>
+        </form>
+      </div>
+      <p class="container passwordResultContainer">
+        <span class="passwordLabel">Password:</span>
+        <span class="passwordResultText" id="passwordResult"></span>
+        <button
+          onclick="copyPassword()"
+          title="Copy Password"
+          class="copy-button"
+          onmouseover="changeIcon()"
+        >
+          <span onclick="copyPassword()" class="copy-icon fa fa-copy"></span>
+        </button>
+      </p>
+      <script src=" js/script.js"></script>
+    </main>
+  </body>
+</html>
