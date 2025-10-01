@@ -203,10 +203,6 @@ form .selectCharacters {
   margin-left: 20px;
 }
 
-aside :is(p, label.lengthLabel) {
-  font-size: var(--font-size-medium);
-}
-
 aside.selectCharacterLength .passwordLengthInput {
   background: rgba(0, 0, 0, 0.6);
   color: inherit;
