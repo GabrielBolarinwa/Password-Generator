@@ -9,7 +9,7 @@ const symbolschars = "!@#$%^&*()_+-=";
 const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
 const passwordResultContainer = document.querySelector(
-  ".passwordResultContainer"
+  ".passwordResultContainer",
 );
 const copyIcon = document.querySelector(".copy-icon");
 let passwordResult = document.getElementById("passwordResult");
@@ -38,11 +38,11 @@ function generatePassword(event) {
 
   for (let r = 0; r < lengthText; r++) {
     password += allowedChars.charAt(
-      Math.floor(Math.random() * allowedChars.length)
+      Math.floor(Math.random() * allowedChars.length),
     );
   }
   passwordResult.textContent = password;
-  passwordResultContainer.style.display = "flow-root";
+  passwordResultContainer.style.display = "flex";
   changeIcon();
 }
 
