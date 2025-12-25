@@ -204,7 +204,15 @@ form .selectCharacters {
   margin-left: 20px;
 }
 
-div.selectCharacterLength .passwordLengthInput {
+fieldset {
+  border: none;
+  outline: none;
+
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.selectCharacterLength .passwordLengthInput {
   background: rgba(0, 0, 0, 0.6);
   color: inherit;
   margin: 10px 0 0 20px;

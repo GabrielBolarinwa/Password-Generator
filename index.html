@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Webpage</title>
+    <meta
+      name="description"
+      content="This is a subset of the Gabriel Bolarinwa Portfolio. It is a password Generator that creates random passwords with low collision probabilities"
+    />
+    <title>Password Generator - Gabriel Bolarinwa</title>
     <link rel="stylesheet" href="fontawesome6/pro/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
@@ -13,8 +17,10 @@
       <div class="container">
         <h1>Password Generator</h1>
         <form class="passwordGenerator" onsubmit="generatePassword(event)">
-          <div class="selectCharacters">
-            <p>Select the Characters to be contained in the password:</p>
+          <fieldset class="selectCharacters">
+            <legend>
+              Select the Characters to be contained in the password:
+            </legend>
             <div>
               <input type="checkbox" name="" id="lowerCase" checked />
               <label for="lowerCase">Lower Case Characters</label><br />
@@ -25,8 +31,8 @@
               <input type="checkbox" name="" id="number" />
               <label for="number">Numbers</label><br />
             </div>
-          </div>
-          <div class="selectCharacterLength">
+          </fieldset>
+          <fieldset class="selectCharacterLength">
             <label for="lengthText" class="lengthLabel"
               >Enter Desired Password Length:</label
             >
@@ -40,7 +46,7 @@
                 value="10"
               />
             </div>
-          </div>
+          </fieldset>
           <button type="submit" class="formSubmit">Generate Password</button>
         </form>
       </div>
